@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECRET</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff0f3 0%, #fdfbfb 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(255, 75, 110, 0.15);
+            z-index: 10;
+            width: 100%;
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-out forwards;
+            box-sizing: border-box;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            color: #ff4d6d;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .story {
+            text-align: left;
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            padding: 0 10px;
+        }
+
+        .story p { margin-bottom: 15px; }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        #yesBtn {
+            background-color: #ff4d6d;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 77, 109, 0.4);
+        }
+
+        #noBtn {
+            background-color: #e0e0e0;
+            color: #555;
+            position: relative;
+        }
+
+        #yesBtn:hover {
+            transform: scale(1.08);
+            background-color: #ff3358;
+            box-shadow: 0 6px 20px rgba(255, 77, 109, 0.6);
+        }
+
+        /* Styles for the Memories Button and Grid */
+        .memory-btn {
+            background-color: #ffb3c1;
+            color: #d00000;
+            width: 100%;
+            margin: 15px 0;
+            font-size: 1.1rem;
+        }
+        
+        .memory-btn:hover {
+            background-color: #ff8fa3;
+            transform: scale(1.02);
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        .hidden { display: none !important; }
+        
+        #celebration h1 { color: #ff006e; margin-top: 20px; }
+        #celebration p { font-size: 1.2rem; color: #555; }
+        #celebration img { border-radius: 15px; max-width: 100%; }
+
+        @media (max-width: 480px) {
+            .container { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+            .story { font-size: 1rem; }
+            button { padding: 12px 25px; font-size: 1rem; }
+            .photo-grid img { height: 140px; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bgMusic" autoplay loop>
+        <source src="Ricky_Montgomery_-_Line_Without_a_Hook_(mp3.pm).mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="main-content" class="container">
+        <div class="hero-image">
+            <img src="e415cbfc63531cc841cf0f15cae78b1a.jpg" alt="Floating Balloons">
+        </div>
+        
+        <h1>For My Mahi ❤️</h1>
+        
+        <div class="story">
+            <p>They say you never quite know when a regular day is going to turn into one of the best chapters of your life. Then, there was the day I met you, Mahi. Suddenly, the world got brighter, the jokes got a funnier, and simply being together became my favorite thing to do.</p>
+            
+            <p>We've had so many amazing moments since then, <strong>Spending hours talking with eachother, Loving eachother, Caring for eachother, Kissing, holding hands, going out together and spending quality time, Supporting eachother, Being there for eachother always....</strong> It doesnt end...Our love is like an infinite road, a never ending love, a never ending story. I am very lucky to have you Mahi. I will love you beyond infinity.</p>
+            
+            <p>You are radiant, incredibly kind, and utterly captivating. There is no one else in this world quite like you, Mahi. Every second with you feels like a gift, and my heart beats entirely for you. Your eyes take away my heart, your smile is ethereal—the cutest in the whole world—and above all, you are the one for me, only me. Every single thing about you mesmerizes me. You aren't just my favorite person to be around; you are my peace, my greatest adventure, and the absolute center of my world. So, I have to ask the most important question of the year... I have so, A question for you.........</p>
+        </div>
+
+        <button class="memory-btn" onclick="showQuestion()">Reveal My Question... ❤️</button>
+    </div>
+
+    <div id="question-page" class="container hidden">
+        <h2 style="color: #ff4d6d; margin-bottom: 20px;">Will you be my Valentine?🥹🥹🥹🥹🥹🥹🥹</h2>
+        
+        <div class="buttons">
+            <button id="yesBtn" onclick="showCelebration()">Yes!</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">No</button>
+        </div>
+    </div>
+
+    <div id="memories-page" class="container hidden">
+        <h1 style="color: #ff4d6d;">WE AND US❤️</h1>
+        
+        <div class="photo-grid">
+            <img src="IMG_20230404_124604.jpg" alt="Memory 1">
+            <img src="IMG-20230606-WA0024.jpg" alt="Memory 2">
+            <img src="IMG-20240531-WA0068_20260116_145645_0000.jpg" alt="Memory 3">
+            <img src="IMG-20241109-WA0034(1).jpg" alt="Memory 4">
+            <img src="f35459f398d7a2c11925bc6c8e77cb74.jpg" alt="Memory 4">
+            <img src="Screenshot_20221208-141146_WhatsApp.jpg" alt="Memory 4">
+            <img src="1000001000_fa170bfa82fa3856c01f4ff109ed0d98-04_02_2025, 00_03_36.jpg" alt="Memory 4">
+            <img src="226974_7800e99e4fe08cea4c9170e05efdaed8-12_17_2024, 10_16_14 PM.jpg" alt="Memory 4">
+        </div>
+        
+        <p style="color: #555; font-size: 1.1rem; margin-bottom: 20px;">Every picture tells a story, and ours is my favorite.</p>
+        
+        <button id="yesBtn" style="width: 100%;" onclick="hideMemories()">Back ... ❤️</button>
+    </div>
+
+    <div id="celebration" class="container hidden">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueXpueXpueXpueXpueXpueXpueXpueXpueXpueXpueXpueSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/26FLdmIp6wJr91JAI/giphy.gif" alt="Celebration">
+        <h1>Yayyyyyyyyyy! I love youuuuu MAHIIII😍♥️❤️</h1>
+        <p>ummmmmmah😘 ummmmmmmmah😘 ummmmmmmmah😘 ummmmmmmmah😘 ummmmmmmah😘 ummaaaaaaahhhh😘 ummmmmmmmmmaahhhhhhhhh😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘😘</p>
+        
+        <button class="memory-btn" onclick="showMemories()" style="margin-top: 30px;"> SOME..❤️</button>
+    </div>
+
+    <script>
+        // Go from Page 1 (Story) to Page 2 (Question)
+        function showQuestion() {
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('question-page').classList.remove('hidden');
+            window.scrollTo(0, 0); 
+        }
+
+        // Go from Page 4 (Celebration) to Page 3 (Memories)
+        function showMemories() {
+            document.getElementById('celebration').classList.add('hidden');
+            document.getElementById('memories-page').classList.remove('hidden');
+            window.scrollTo(0, 0); 
+        }
+
+        // Go from Page 3 (Memories) back to Page 4 (Celebration)
+        function hideMemories() {
+            document.getElementById('memories-page').classList.add('hidden');
+            document.getElementById('celebration').classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        // Make the "No" button run away (On Page 2)
+        function moveButton() {
+            const btn = document.getElementById('noBtn');
+            
+            const maxX = window.innerWidth - btn.offsetWidth - 20;
+            const maxY = window.innerHeight - btn.offsetHeight - 20;
+            
+            const x = Math.max(10, Math.random() * maxX);
+            const y = Math.max(10, Math.random() * maxY);
+            
+            btn.style.position = 'fixed';
+            btn.style.left = `${x}px`;
+            btn.style.top = `${y}px`;
+        }
+
+        // Trigger the celebration and confetti (From Page 2 to Page 4)
+        function showCelebration() {
+            document.getElementById('question-page').classList.add('hidden');
+            document.getElementById('celebration').classList.remove('hidden');
+            window.scrollTo(0, 0);
+            
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+                if (timeLeft <= 0) { return clearInterval(interval); }
+                var particleCount = 50 * (timeLeft / duration);
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+            }, 250);
+        }
+
+        // ADDED: This guarantees the music plays if the browser blocks the strict autoplay
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('bgMusic');
+            if (audio.paused) {
+                audio.play().catch(function(error) {
+                    console.log("Audio playback requires user interaction.");
+                });
+            }
+        }, { once: true });
+    </script>
+</body>
+</html>
